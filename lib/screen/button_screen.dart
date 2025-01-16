@@ -10,6 +10,7 @@ import 'package:smwu/screen/row/row_screen.dart';
 import 'package:smwu/screen/column_screen.dart';
 import 'package:smwu/screen/text/text_practice_screen.dart';
 import 'package:smwu/screen/text/text_screen.dart';
+import 'package:smwu/screen/stack/stack_screen.dart';
 
 class ButtonScreen extends StatelessWidget {
   const ButtonScreen({super.key});
@@ -20,110 +21,122 @@ class ButtonScreen extends StatelessWidget {
     //Column: 세로로 위젯을 나열
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            ElevatedButton(
-                onPressed: () {
-                  //화면 이동 navigator
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return ContainerScreen();
-                    },
-                  ));
-                },
-                child: Text("Container")),
-            SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return ColumnScreen();
-                    },
-                  ));
-                },
-                child: Text("Column")),
-            SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return RowScreen();
-                    },
-                  ));
-                },
-                child: Text("Row")),
-            SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return ContainerPracticeScreen();
-                    },
-                  ));
-                },
-                child: Text("Container 실습")),
-            SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return ColumnPracticeScreen();
-                    },
-                  ));
-                },
-                child: Text("Column실습")),
-            SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return RowPracticeScreen();
-                    },
-                  ));
-                },
-                child: Text("Row 실습")),
-            SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return ColumnRowAdvancedScreen();
-                    },
-                  ));
-                },
-                child: Text("Column Row 심화")),
-            SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return TextScreen();
-                    },
-                  ));
-                },
-                child: Text("Text")),
-            SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return TextPracticeScreen();
-                    },
-                  ));
-                },
-                child: Text("Text 실습")),
-            SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) {
-                      return ImageScreen();
-                    },
-                  ));
-                },
-                child: Text("Image")),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              ElevatedButton(
+                  onPressed: () {
+                    //화면 이동 navigator
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ContainerScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Container")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ColumnScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Column")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return RowScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Row")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ContainerPracticeScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Container 실습")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ColumnPracticeScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Column실습")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return RowPracticeScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Row 실습")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ColumnRowAdvancedScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Column Row 심화")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return TextScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Text")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return TextPracticeScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Text 실습")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ImageScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Image")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return StackScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Stack")),
+            ],
+          ),
         ),
       ),
     );
