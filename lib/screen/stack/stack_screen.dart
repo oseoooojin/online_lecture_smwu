@@ -31,7 +31,6 @@ class StackScreen extends StatelessWidget {
                 color: Colors.orange,
                 width: 160,
                 height: 160,
-
               ),
             ),
             Positioned(
