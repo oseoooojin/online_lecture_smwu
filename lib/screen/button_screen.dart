@@ -4,20 +4,22 @@ import 'package:smwu/listview/listview_builder_screen.dart';
 import 'package:smwu/listview/listview_practice_screen.dart';
 import 'package:smwu/listview/listview_screen.dart';
 import 'package:smwu/screen/%20image/image_screen.dart';
+import 'package:smwu/screen/checkbox/checkbox_screen.dart';
 import 'package:smwu/screen/click/click_screen.dart';
-import 'package:smwu/screen/column_practice_screen.dart';
-import 'package:smwu/screen/column_row_advanced_screen.dart';
-import 'package:smwu/screen/container_practice_screen.dart';
+import 'package:smwu/screen/column/column_practice_screen.dart';
+import 'package:smwu/screen/column/column_row_advanced_screen.dart';
+import 'package:smwu/screen/container/container_practice_screen.dart';
 import 'package:smwu/screen/row/row_practice_screen.dart';
-import 'package:smwu/screen/container_screen.dart';
+import 'package:smwu/screen/container/container_screen.dart';
 import 'package:smwu/screen/row/row_screen.dart';
-import 'package:smwu/screen/column_screen.dart';
+import 'package:smwu/screen/column/column_screen.dart';
 import 'package:smwu/screen/stack/stack_practice_screen.dart';
 import 'package:smwu/screen/stateful/stateful_screen.dart';
 import 'package:smwu/screen/stateless/stateless_screen.dart';
 import 'package:smwu/screen/text/text_practice_screen.dart';
 import 'package:smwu/screen/text/text_screen.dart';
 import 'package:smwu/screen/stack/stack_screen.dart';
+import 'package:smwu/screen/text_form_field/text_form_field_screen.dart';
 
 class ButtonScreen extends StatelessWidget {
   const ButtonScreen({super.key});
@@ -212,7 +214,28 @@ class ButtonScreen extends StatelessWidget {
                     ));
                   },
                   child: Text("Click")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return CheckboxScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Checkbox")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return TextFormFieldScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Field")),
             ],
+
           ),
         ),
       ),
