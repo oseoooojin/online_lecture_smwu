@@ -12,6 +12,8 @@ import 'package:smwu/screen/container_screen.dart';
 import 'package:smwu/screen/row/row_screen.dart';
 import 'package:smwu/screen/column_screen.dart';
 import 'package:smwu/screen/stack/stack_practice_screen.dart';
+import 'package:smwu/screen/stateful/stateful_screen.dart';
+import 'package:smwu/screen/stateless/stateless_screen.dart';
 import 'package:smwu/screen/text/text_practice_screen.dart';
 import 'package:smwu/screen/text/text_screen.dart';
 import 'package:smwu/screen/stack/stack_screen.dart';
@@ -179,6 +181,26 @@ class ButtonScreen extends StatelessWidget {
                     ));
                   },
                   child: Text("ListView 실습")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return StatelessScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Stateless")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return StatefulScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Stateful")),
             ],
           ),
         ),
