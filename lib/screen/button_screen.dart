@@ -4,6 +4,7 @@ import 'package:smwu/listview/listview_builder_screen.dart';
 import 'package:smwu/listview/listview_practice_screen.dart';
 import 'package:smwu/listview/listview_screen.dart';
 import 'package:smwu/screen/%20image/image_screen.dart';
+import 'package:smwu/screen/click/click_screen.dart';
 import 'package:smwu/screen/column_practice_screen.dart';
 import 'package:smwu/screen/column_row_advanced_screen.dart';
 import 'package:smwu/screen/container_practice_screen.dart';
@@ -201,6 +202,16 @@ class ButtonScreen extends StatelessWidget {
                     ));
                   },
                   child: Text("Stateful")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ClickScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Click")),
             ],
           ),
         ),
