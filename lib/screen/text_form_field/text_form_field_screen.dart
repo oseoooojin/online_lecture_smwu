@@ -54,7 +54,6 @@ class _TextFormFieldScreenState extends State<TextFormFieldScreen> {
                   //   );
                   //   print("controller : ${controller.text}");
                   // },
-
                   keyboardType: TextInputType.text,
                   // obscureText: true,
                   // 글자 속성 변경
