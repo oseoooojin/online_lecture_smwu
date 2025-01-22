@@ -4,11 +4,17 @@ import 'package:smwu/listview/listview_builder_screen.dart';
 import 'package:smwu/listview/listview_practice_screen.dart';
 import 'package:smwu/listview/listview_screen.dart';
 import 'package:smwu/screen/%20image/image_screen.dart';
+import 'package:smwu/screen/Todo_widget/todo_screen.dart';
+import 'package:smwu/screen/bottom_sheet/bottom_sheet_screen.dart';
 import 'package:smwu/screen/checkbox/checkbox_screen.dart';
 import 'package:smwu/screen/click/click_screen.dart';
 import 'package:smwu/screen/column/column_practice_screen.dart';
 import 'package:smwu/screen/column/column_row_advanced_screen.dart';
 import 'package:smwu/screen/container/container_practice_screen.dart';
+import 'package:smwu/screen/default_tab_controller/default_tab_controller_screen.dart';
+import 'package:smwu/screen/dialogue/dialog_screen.dart';
+import 'package:smwu/screen/network/network_screen.dart';
+import 'package:smwu/screen/pageview/page_view_screen.dart';
 import 'package:smwu/screen/row/row_practice_screen.dart';
 import 'package:smwu/screen/container/container_screen.dart';
 import 'package:smwu/screen/row/row_screen.dart';
@@ -16,6 +22,7 @@ import 'package:smwu/screen/column/column_screen.dart';
 import 'package:smwu/screen/stack/stack_practice_screen.dart';
 import 'package:smwu/screen/stateful/stateful_screen.dart';
 import 'package:smwu/screen/stateless/stateless_screen.dart';
+import 'package:smwu/screen/tabbar/tab_bar_screen.dart';
 import 'package:smwu/screen/text/text_practice_screen.dart';
 import 'package:smwu/screen/text/text_screen.dart';
 import 'package:smwu/screen/stack/stack_screen.dart';
@@ -234,6 +241,76 @@ class ButtonScreen extends StatelessWidget {
                     ));
                   },
                   child: Text("Field")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return TodoScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Todo")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return NetworkScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Network")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return PageViewScreen();
+                      },
+                    ));
+                  },
+                  child: Text("PageView")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return TabBarScreen();
+                      },
+                    ));
+                  },
+                  child: Text("TabBar")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return DefaultTabControllerScreen();
+                      },
+                    ));
+                  },
+                  child: Text("DefaultTab")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return DialogScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Dialog")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return BottomSheetScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Bottomsheet")),
             ],
 
           ),
