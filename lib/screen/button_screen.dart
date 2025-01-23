@@ -20,6 +20,7 @@ import 'package:smwu/screen/container/container_screen.dart';
 import 'package:smwu/screen/row/row_screen.dart';
 import 'package:smwu/screen/column/column_screen.dart';
 import 'package:smwu/screen/stack/stack_practice_screen.dart';
+import 'package:smwu/screen/state_management/state_management_screen.dart';
 import 'package:smwu/screen/stateful/stateful_screen.dart';
 import 'package:smwu/screen/stateless/stateless_screen.dart';
 import 'package:smwu/screen/tabbar/tab_bar_screen.dart';
@@ -27,6 +28,7 @@ import 'package:smwu/screen/text/text_practice_screen.dart';
 import 'package:smwu/screen/text/text_screen.dart';
 import 'package:smwu/screen/stack/stack_screen.dart';
 import 'package:smwu/screen/text_form_field/text_form_field_screen.dart';
+import 'package:smwu/screen/ui_exam.dart';
 
 class ButtonScreen extends StatelessWidget {
   const ButtonScreen({super.key});
@@ -311,6 +313,26 @@ class ButtonScreen extends StatelessWidget {
                     ));
                   },
                   child: Text("Bottomsheet")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return StateManagementScreen();
+                      },
+                    ));
+                  },
+                  child: Text("StateManagement")),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return UiExam();
+                      },
+                    ));
+                  },
+                  child: Text("UI")),
             ],
 
           ),
