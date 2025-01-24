@@ -10,6 +10,7 @@ import 'package:smwu/screen/checkbox/checkbox_screen.dart';
 import 'package:smwu/screen/click/click_screen.dart';
 import 'package:smwu/screen/column/column_practice_screen.dart';
 import 'package:smwu/screen/column/column_row_advanced_screen.dart';
+import 'package:smwu/screen/commerce/navigation/navigation_screen.dart';
 import 'package:smwu/screen/container/container_practice_screen.dart';
 import 'package:smwu/screen/default_tab_controller/default_tab_controller_screen.dart';
 import 'package:smwu/screen/dialogue/dialog_screen.dart';
@@ -43,6 +44,17 @@ class ButtonScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              ElevatedButton(
+                  onPressed: () {
+                    //화면 이동 navigator
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return NavigationScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Navigation")),
+              SizedBox(height: 10),
               ElevatedButton(
                   onPressed: () {
                     //화면 이동 navigator
